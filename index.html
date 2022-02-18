@@ -14,41 +14,40 @@
 <body>
   <header class="">
     <div class="container">
-      <div class="banner-intro">
+      <div class="banner-intro py-3 px-2">
         <h1 class="title is-size-4">Profile Loader</h1>
         <p class="subtitle is-size-6">Loads profile details of different users from an API.</p>
       </div>
     </div>
+    <hr class="">
   </header>
-  <hr class="">
 
   <main class="">
     <div class="container">
-      <section class="columns is-multiline" data-profile-wrapper>
-        <!-- JS renders the template here -->
+      <section class="columns is-multiline mx-0" data-profile-wrapper>
+        <!-- JS renders the template here dynamically -->
       </section>
     </div>
+  </main>
 
-
-    <!-- Template to generate the profile dynamically -->
-    <template class="profile-template" data-template>
-      <div class="column is-6-tablet is-4-desktop">
-        <div class="notification is-flex">
-          <!-- User profile image -->
-          <figure class="user-img image is-64x64">
-            <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-            <figcaption class="is-size-7 has-text-centered">24 years</figcaption>
-          </figure>
-          <!-- User name and email -->
-          <div class="name-email ml-2">
-            <p class="is-size-5">Mr. John Doe</p>
-            <p class="is-size-7">johndoe@mail.com</p>
-            <p class="is-size-6">011-962-7516</p>
-            <p class="is-size-7">street, city, state</p>
-          </div>
+  <!-- Template to generate the profile dynamically -->
+  <template class="profile-template" data-template>
+    <div class="column is-6-tablet is-4-desktop">
+      <div class="notification is-flex">
+        <!-- User profile image -->
+        <figure class="user-img image is-64x64">
+          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+          <figcaption class="is-size-7 has-text-centered">24 years</figcaption>
+        </figure>
+        <!-- User name and email -->
+        <div class="name-email ml-2">
+          <p class="is-size-5">Mr. John Doe</p>
+          <p class="is-size-7">johndoe@mail.com</p>
+          <p class="is-size-6">011-962-7516</p>
+          <p class="is-size-7">street, city, state</p>
         </div>
       </div>
-    </template>
-  </main>
+    </div>
+  </template>
 </body>
 </html>
