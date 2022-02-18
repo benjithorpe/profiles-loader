@@ -1,0 +1,11 @@
+:root{
+  --profile-image-size: 75px;
+}
+*{
+  font-family: 'Quicksand', sans-serif;
+  box-sizing: border-box;
+}
+.profile-img img{
+  width: var(--profile-image-size);
+  height: var(--profile-image-size);
+}
