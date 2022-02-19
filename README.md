@@ -2,7 +2,7 @@
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 A simple single page site that loads random user profiles.
-
+> API is from [randomuser.me](https://randomuser.me)
 
 ## Tech Stack
 - **Client:** HTML5, CSS3, Bulma

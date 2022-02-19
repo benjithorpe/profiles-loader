@@ -25,7 +25,11 @@
   <main class="">
     <div class="container">
       <section class="columns is-multiline mx-0" data-profile-wrapper>
-        <!-- JS renders the template here dynamically -->
+        <!-- Shows a spinner before data is loaded -->
+        <div class="waiting-loader is-flex py-3" data-waiting-loader>
+          <div class="loader"></div>
+          <p class="loading-info">loading profiles...</p>
+        </div>
       </section>
     </div>
   </main>

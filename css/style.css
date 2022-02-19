@@ -9,3 +9,31 @@
   width: var(--profile-image-size);
   height: var(--profile-image-size);
 }
+
+/* an animated circle to spin while data is loading */
+div.waiting-loader{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+div.loader{
+  border: 2px dashed lightslategray;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  animation-name: spinLoader;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spinLoader {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
