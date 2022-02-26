@@ -3,7 +3,7 @@ const profileListWrapper = document.querySelector('[data-profile-wrapper]');
 const loadingSpinner = document.querySelector('[data-waiting-loader]');
 
 // Generates the profile cards to be used
-function generateProfiles(profileList = []) {
+function generateProfileCard(profileList = []) {
 
   for (let i = 0; i < profileList.length; i++) {
     const item = template.content.cloneNode(true);
@@ -31,13 +31,15 @@ function generateProfiles(profileList = []) {
 
 const RANDOM_USER_URL = "https://randomuser.me/api/1.3/?results=10";
 
-fetch(RANDOM_USER_URL)
+(function getRandomProfiles(gender){
+  fetch(RANDOM_USER_URL)
   .then(response => response.json())
   .then(data => {
-    generateProfiles(data.results);
+    generateProfileCard(data.results);
     profileListWrapper.removeChild(loadingSpinner);  // Remove the loading spinner
   })
   .catch(error => {
     const errorMsg = "Sorry :( an error occurred, please refresh the site.";
     loadingSpinner.querySelector("p.loading-info").textContent = errorMsg;
   });
+})();
